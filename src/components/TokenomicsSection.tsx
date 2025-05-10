@@ -31,7 +31,8 @@ const TokenomicsSection = () => {
                     <span className="font-medium text-gray-700">Public Sale</span>
                     <span className="font-medium text-memeorange">40%</span>
                   </div>
-                  <Progress value={40} className="h-2 bg-gray-200" indicatorClassName="bg-memeorange" />
+                  <Progress value={40} className="h-2 bg-gray-200" 
+                    style={{ background: "var(--gray-200)", "--tw-bg-opacity": "1" }} />
                 </div>
                 
                 <div>
@@ -39,7 +40,7 @@ const TokenomicsSection = () => {
                     <span className="font-medium text-gray-700">Liquidity Pool</span>
                     <span className="font-medium text-memepurple">25%</span>
                   </div>
-                  <Progress value={25} className="h-2 bg-gray-200" indicatorClassName="bg-memepurple" />
+                  <Progress value={25} className="h-2 bg-gray-200" />
                 </div>
                 
                 <div>
@@ -47,7 +48,7 @@ const TokenomicsSection = () => {
                     <span className="font-medium text-gray-700">Team & Development</span>
                     <span className="font-medium text-memeblue">15%</span>
                   </div>
-                  <Progress value={15} className="h-2 bg-gray-200" indicatorClassName="bg-memeblue" />
+                  <Progress value={15} className="h-2 bg-gray-200" />
                 </div>
                 
                 <div>
@@ -55,7 +56,7 @@ const TokenomicsSection = () => {
                     <span className="font-medium text-gray-700">Marketing</span>
                     <span className="font-medium text-memeorange-dark">10%</span>
                   </div>
-                  <Progress value={10} className="h-2 bg-gray-200" indicatorClassName="bg-memeorange-dark" />
+                  <Progress value={10} className="h-2 bg-gray-200" />
                 </div>
                 
                 <div>
@@ -63,7 +64,7 @@ const TokenomicsSection = () => {
                     <span className="font-medium text-gray-700">Partnerships & Ecosystem</span>
                     <span className="font-medium text-memepurple-dark">10%</span>
                   </div>
-                  <Progress value={10} className="h-2 bg-gray-200" indicatorClassName="bg-memepurple-dark" />
+                  <Progress value={10} className="h-2 bg-gray-200" />
                 </div>
               </div>
             </CardContent>
