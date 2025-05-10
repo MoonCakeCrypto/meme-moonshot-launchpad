@@ -2,10 +2,16 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
+
+  const getNavHref = (section: string) => {
+    return isHomePage ? `#${section}` : `/#${section}`;
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-50 border-b border-gray-200">
@@ -23,21 +29,36 @@ const Navbar = () => {
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-4">
-              <a href="#about" className="text-gray-700 hover:text-memeorange px-3 py-2 rounded-md text-sm font-medium">
+              <Link 
+                to={getNavHref("about")} 
+                className="text-gray-700 hover:text-memeorange px-3 py-2 rounded-md text-sm font-medium"
+              >
                 About
-              </a>
-              <a href="#tokenomics" className="text-gray-700 hover:text-memeorange px-3 py-2 rounded-md text-sm font-medium">
+              </Link>
+              <Link 
+                to={getNavHref("tokenomics")} 
+                className="text-gray-700 hover:text-memeorange px-3 py-2 rounded-md text-sm font-medium"
+              >
                 Tokenomics
-              </a>
-              <a href="#community" className="text-gray-700 hover:text-memeorange px-3 py-2 rounded-md text-sm font-medium">
+              </Link>
+              <Link 
+                to={getNavHref("community")} 
+                className="text-gray-700 hover:text-memeorange px-3 py-2 rounded-md text-sm font-medium"
+              >
                 Community
-              </a>
-              <a href="#howto" className="text-gray-700 hover:text-memeorange px-3 py-2 rounded-md text-sm font-medium">
+              </Link>
+              <Link 
+                to={getNavHref("howto")} 
+                className="text-gray-700 hover:text-memeorange px-3 py-2 rounded-md text-sm font-medium"
+              >
                 How To Buy
-              </a>
-              <a href="#roadmap" className="text-gray-700 hover:text-memeorange px-3 py-2 rounded-md text-sm font-medium">
+              </Link>
+              <Link 
+                to={getNavHref("roadmap")} 
+                className="text-gray-700 hover:text-memeorange px-3 py-2 rounded-md text-sm font-medium"
+              >
                 Roadmap
-              </a>
+              </Link>
               <Link to="/buy">
                 <Button className="bg-memeorange hover:bg-memeorange-dark text-white">
                   Buy Now
@@ -61,41 +82,41 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t border-gray-200">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a
-              href="#about"
+            <Link
+              to={getNavHref("about")}
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
               onClick={() => setIsMenuOpen(false)}
             >
               About
-            </a>
-            <a
-              href="#tokenomics"
+            </Link>
+            <Link
+              to={getNavHref("tokenomics")}
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
               onClick={() => setIsMenuOpen(false)}
             >
               Tokenomics
-            </a>
-            <a
-              href="#community"
+            </Link>
+            <Link
+              to={getNavHref("community")}
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
               onClick={() => setIsMenuOpen(false)}
             >
               Community
-            </a>
-            <a
-              href="#howto"
+            </Link>
+            <Link
+              to={getNavHref("howto")}
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
               onClick={() => setIsMenuOpen(false)}
             >
               How To Buy
-            </a>
-            <a
-              href="#roadmap"
+            </Link>
+            <Link
+              to={getNavHref("roadmap")}
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
               onClick={() => setIsMenuOpen(false)}
             >
               Roadmap
-            </a>
+            </Link>
             <Link to="/buy" onClick={() => setIsMenuOpen(false)}>
               <Button className="w-full mt-2 bg-memeorange hover:bg-memeorange-dark text-white">
                 Buy Now
