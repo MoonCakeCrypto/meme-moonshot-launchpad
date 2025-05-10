@@ -31,8 +31,12 @@ const TokenomicsSection = () => {
                     <span className="font-medium text-gray-700">Public Sale</span>
                     <span className="font-medium text-memeorange">40%</span>
                   </div>
-                  <Progress value={40} className="h-2 bg-gray-200" 
-                    style={{ background: "var(--gray-200)", "--tw-bg-opacity": "1" }} />
+                  <div className="relative w-full h-2 bg-gray-200 rounded-full overflow-hidden">
+                    <div 
+                      className="absolute top-0 left-0 h-full bg-memeorange rounded-full" 
+                      style={{ width: "40%" }}
+                    ></div>
+                  </div>
                 </div>
                 
                 <div>
@@ -40,7 +44,12 @@ const TokenomicsSection = () => {
                     <span className="font-medium text-gray-700">Liquidity Pool</span>
                     <span className="font-medium text-memepurple">25%</span>
                   </div>
-                  <Progress value={25} className="h-2 bg-gray-200" />
+                  <div className="relative w-full h-2 bg-gray-200 rounded-full overflow-hidden">
+                    <div 
+                      className="absolute top-0 left-0 h-full bg-memepurple rounded-full" 
+                      style={{ width: "25%" }}
+                    ></div>
+                  </div>
                 </div>
                 
                 <div>
@@ -48,7 +57,12 @@ const TokenomicsSection = () => {
                     <span className="font-medium text-gray-700">Team & Development</span>
                     <span className="font-medium text-memeblue">15%</span>
                   </div>
-                  <Progress value={15} className="h-2 bg-gray-200" />
+                  <div className="relative w-full h-2 bg-gray-200 rounded-full overflow-hidden">
+                    <div 
+                      className="absolute top-0 left-0 h-full bg-memeblue rounded-full" 
+                      style={{ width: "15%" }}
+                    ></div>
+                  </div>
                 </div>
                 
                 <div>
@@ -56,7 +70,12 @@ const TokenomicsSection = () => {
                     <span className="font-medium text-gray-700">Marketing</span>
                     <span className="font-medium text-memeorange-dark">10%</span>
                   </div>
-                  <Progress value={10} className="h-2 bg-gray-200" />
+                  <div className="relative w-full h-2 bg-gray-200 rounded-full overflow-hidden">
+                    <div 
+                      className="absolute top-0 left-0 h-full bg-memeorange-dark rounded-full" 
+                      style={{ width: "10%" }}
+                    ></div>
+                  </div>
                 </div>
                 
                 <div>
@@ -64,7 +83,12 @@ const TokenomicsSection = () => {
                     <span className="font-medium text-gray-700">Partnerships & Ecosystem</span>
                     <span className="font-medium text-memepurple-dark">10%</span>
                   </div>
-                  <Progress value={10} className="h-2 bg-gray-200" />
+                  <div className="relative w-full h-2 bg-gray-200 rounded-full overflow-hidden">
+                    <div 
+                      className="absolute top-0 left-0 h-full bg-memepurple-dark rounded-full" 
+                      style={{ width: "10%" }}
+                    ></div>
+                  </div>
                 </div>
               </div>
             </CardContent>
