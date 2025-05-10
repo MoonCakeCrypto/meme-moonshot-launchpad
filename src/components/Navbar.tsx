@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,14 +12,14 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <span className="flex items-center">
+            <Link to="/" className="flex items-center">
               <div className="animate-spin-slow animation-delay-2000">
                 <div className="h-8 w-8 rounded-full bg-meme-gradient"></div>
               </div>
               <span className="ml-2 text-xl font-bold bg-clip-text text-transparent bg-meme-gradient">
                 MEMECOIN
               </span>
-            </span>
+            </Link>
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-4">
@@ -37,9 +38,11 @@ const Navbar = () => {
               <a href="#roadmap" className="text-gray-700 hover:text-memeorange px-3 py-2 rounded-md text-sm font-medium">
                 Roadmap
               </a>
-              <Button className="bg-memeorange hover:bg-memeorange-dark text-white">
-                Buy Now
-              </Button>
+              <Link to="/buy">
+                <Button className="bg-memeorange hover:bg-memeorange-dark text-white">
+                  Buy Now
+                </Button>
+              </Link>
             </div>
           </div>
           <div className="md:hidden">
@@ -93,9 +96,11 @@ const Navbar = () => {
             >
               Roadmap
             </a>
-            <Button className="w-full mt-2 bg-memeorange hover:bg-memeorange-dark text-white">
-              Buy Now
-            </Button>
+            <Link to="/buy" onClick={() => setIsMenuOpen(false)}>
+              <Button className="w-full mt-2 bg-memeorange hover:bg-memeorange-dark text-white">
+                Buy Now
+              </Button>
+            </Link>
           </div>
         </div>
       )}

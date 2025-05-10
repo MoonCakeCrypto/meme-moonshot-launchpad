@@ -2,6 +2,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Rocket } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -26,9 +27,11 @@ const HeroSection = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <Button className="bg-memeorange hover:bg-memeorange-dark text-white flex items-center gap-2 text-lg py-6">
-                <Rocket size={20} /> Buy Tokens
-              </Button>
+              <Link to="/buy">
+                <Button className="bg-memeorange hover:bg-memeorange-dark text-white flex items-center gap-2 text-lg py-6">
+                  <Rocket size={20} /> Buy Tokens
+                </Button>
+              </Link>
               <Button variant="outline" className="border-memepurple text-memepurple hover:bg-memepurple hover:text-white text-lg py-6">
                 Join Community
               </Button>
