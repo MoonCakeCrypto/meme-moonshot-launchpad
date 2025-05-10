@@ -5,6 +5,7 @@ import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import TokenomicsSection from "@/components/TokenomicsSection";
 import HowToBuySection from "@/components/HowToBuySection";
+import RoadmapSection from "@/components/RoadmapSection";
 import FaqSection from "@/components/FaqSection";
 import CommunitySection from "@/components/CommunitySection";
 import Footer from "@/components/Footer";
@@ -17,6 +18,7 @@ const Index = () => {
       <AboutSection />
       <TokenomicsSection />
       <HowToBuySection />
+      <RoadmapSection />
       <FaqSection />
       <CommunitySection />
       <Footer />
